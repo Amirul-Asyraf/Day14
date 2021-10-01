@@ -1,0 +1,113 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --title-font-size: 22px;
+    --sub-title-font-size: 18px;    
+    --day-font-size: 16px;
+
+    --primary-color: #333333;
+    --secondary-color: #848484;
+}
+
+html, body {
+    font-family: sans-serif;
+    color: var(--primary-color);
+}
+
+#app {padding: 1.25em; min-width:360px}
+
+span, .gray-Text {
+    color: var(--secondary-color);
+}
+
+#weather-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#temp-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* #temp-holder h2::before {
+    content: 'before';
+} */
+
+#temp-holder h2::after {
+    content: '\2109';
+    color: var(--secondary-color);
+    font-size: 12px;
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+#weather-holder ul {
+    list-style-type: none;
+}
+
+#weather-holder ul li {
+    margin: 5px 0;
+}
+
+header h1, p {
+    margin-bottom: 7px;
+}
+
+.day-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--primary-color);
+}
+
+.day-weather h4 {
+    min-width: 100px;
+    /* background-color: yellow; */
+}
+
+.degree-holder p::after {
+    content: '\00B0';
+}
+
+@media (min-width:650px) {
+    header {
+        max-width: 650px;
+    }
+
+    .degree-holder {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .degree-holder p {
+        margin: 0 15px;
+    }
+}
+
+@media (min-width:1000px) {
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .day-weather {
+        border: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .degree-holder p {
+        margin: 0 5px;
+    }
+}
